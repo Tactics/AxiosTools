@@ -1,4 +1,6 @@
-import { InternalAxiosRequestConfig, RawAxiosResponseHeaders, AxiosResponseHeaders, AxiosRequestHeaders, AxiosResponse } from 'axios';
+import { AxiosError, InternalAxiosRequestConfig, RawAxiosResponseHeaders, AxiosResponseHeaders, AxiosRequestHeaders, AxiosResponse } from 'axios';
+
+declare const interceptorFailure: (error: AxiosError) => Promise<AxiosError>;
 
 declare const addDeviceHeader: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
 
@@ -28,4 +30,4 @@ declare class AxiosMock<T = any> {
     private mock_call;
 }
 
-export { AxiosMock, type AxiosMockCallI, addAccessTokenHeader, addDeviceHeader, addDomainHeader, addJsonHeaders, addLanguageHeader };
+export { AxiosMock, type AxiosMockCallI, addAccessTokenHeader, addDeviceHeader, addDomainHeader, addJsonHeaders, addLanguageHeader, interceptorFailure };

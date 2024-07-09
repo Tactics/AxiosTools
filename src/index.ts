@@ -1,3 +1,5 @@
+export { interceptorFailure } from "@/axios/interceptors/request/failure";
+
 export { addDeviceHeader } from "@/axios/interceptors/request/headers/custom/device";
 export { addDomainHeader } from "@/axios/interceptors/request/headers/custom/domain";
 export { addLanguageHeader } from "@/axios/interceptors/request/headers/language";
