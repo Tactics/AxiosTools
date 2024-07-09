@@ -1,6 +1,6 @@
 {
   "name": "@tactics/axios-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities to help ease use of Axios in javascript",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

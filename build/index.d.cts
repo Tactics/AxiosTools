@@ -1,4 +1,6 @@
-import { RawAxiosResponseHeaders, AxiosResponseHeaders, AxiosRequestHeaders, AxiosResponse } from 'axios';
+import { InternalAxiosRequestConfig, RawAxiosResponseHeaders, AxiosResponseHeaders, AxiosRequestHeaders, AxiosResponse } from 'axios';
+
+declare const addJsonHeaders: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
 
 interface AxiosMockCallI {
     success: any;
@@ -18,4 +20,4 @@ declare class AxiosMock<T = any> {
     private mock_call;
 }
 
-export { AxiosMock, type AxiosMockCallI };
+export { AxiosMock, type AxiosMockCallI, addJsonHeaders };
