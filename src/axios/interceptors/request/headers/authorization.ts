@@ -1,6 +1,6 @@
 import { AxiosHeaders, InternalAxiosRequestConfig } from "axios";
 
-const addAccessToken = async (
+export const addAccessTokenHeader = async (
   config: InternalAxiosRequestConfig,
 ): Promise<InternalAxiosRequestConfig> => {
   const access_token = config.params.access_token || false;

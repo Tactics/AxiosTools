@@ -1,6 +1,6 @@
 import { AxiosHeaders, InternalAxiosRequestConfig } from "axios";
 
-const addDomainHeader = async (
+export const addDomainHeader = async (
   config: InternalAxiosRequestConfig,
 ): Promise<InternalAxiosRequestConfig> => {
   const namespace = config.params.namespace || false;

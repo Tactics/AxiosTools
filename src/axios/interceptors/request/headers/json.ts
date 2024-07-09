@@ -1,6 +1,6 @@
 import { AxiosHeaders, InternalAxiosRequestConfig } from "axios";
 
-const addJsonHeaders = async (
+export const addJsonHeaders = async (
   config: InternalAxiosRequestConfig,
 ): Promise<InternalAxiosRequestConfig> => {
   (config.headers as AxiosHeaders)
@@ -8,5 +8,3 @@ const addJsonHeaders = async (
     .set("Accept", "application/json");
   return config;
 };
-
-export { addJsonHeaders };

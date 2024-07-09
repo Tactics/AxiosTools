@@ -1,6 +1,6 @@
 import { AxiosHeaders, InternalAxiosRequestConfig } from "axios";
 
-const addDeviceHeader = async (
+export const addDeviceHeader = async (
   config: InternalAxiosRequestConfig,
 ): Promise<InternalAxiosRequestConfig> => {
   const namespace = config.params.namespace || false;

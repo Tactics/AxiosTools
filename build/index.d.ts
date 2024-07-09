@@ -1,6 +1,14 @@
 import { InternalAxiosRequestConfig, RawAxiosResponseHeaders, AxiosResponseHeaders, AxiosRequestHeaders, AxiosResponse } from 'axios';
 
+declare const addDeviceHeader: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
+
+declare const addDomainHeader: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
+
+declare const addLanguageHeader: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
+
 declare const addJsonHeaders: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
+
+declare const addAccessTokenHeader: (config: InternalAxiosRequestConfig) => Promise<InternalAxiosRequestConfig>;
 
 interface AxiosMockCallI {
     success: any;
@@ -20,4 +28,4 @@ declare class AxiosMock<T = any> {
     private mock_call;
 }
 
-export { AxiosMock, type AxiosMockCallI, addJsonHeaders };
+export { AxiosMock, type AxiosMockCallI, addAccessTokenHeader, addDeviceHeader, addDomainHeader, addJsonHeaders, addLanguageHeader };
