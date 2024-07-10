@@ -39,7 +39,7 @@ When param is set, the access token is attached via the interceptor.
 
 const AxiosInstance = axios.create();
 
-AxiosInstance.defaults.params.access_token = 'MY ACCESS TOKEN';
+AxiosInstance.defaults.params = { access_token : 'MY ACCESS TOKEN'};
 AxiosInstance.interceptors.request.use(addAccessToken, interceptorFailure);
 
 // or 
@@ -69,7 +69,7 @@ You can also provide a namespace to further specify the header.
 ```js
 
 const AxiosInstance = axios.create();
-AxiosInstance.defaults.namespace = 'My-Project'
+AxiosInstance.defaults.params = { namespace : 'My-Project'};
 
 // X-My-Project-Domain 
 AxiosInstance.interceptors.request.use(addDomainHeader, interceptorFailure);
@@ -99,7 +99,7 @@ It needs to provide these in the correct language.
 
 const AxiosInstance = axios.create();
 
-AxiosInstance.defaults.params.language = 'nl';
+AxiosInstance.defaults.params = { language : 'nl'};
 AxiosInstance.interceptors.request.use(addLanguageHeader, interceptorFailure);
 
 // or 
@@ -129,9 +129,11 @@ You can also provide a namespace to further specify the header.
 ```js
 
 const AxiosInstance = axios.create();
-AxiosInstance.defaults.namespace = 'My-Project'
-AxiosInstance.defaults.params.device_id = 'MY DEVICE ID';
-AxiosInstance.defaults.params.device_name = 'MY DEVICE NAME';
+AxiosInstance.defaults.params = {
+    namespace : 'My-Project',
+    device_id : 'MY DEVICE ID',
+    device_name : 'MY DEVICE NAME'
+};
 
 // X-My-Project-Device-Id 
 // X-My-Project-Device-Name
